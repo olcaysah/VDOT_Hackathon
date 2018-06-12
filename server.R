@@ -1,7 +1,11 @@
+# Author: Olcay Sahin
+# Date: Tue Apr 17 12:36:59 2018
+# Author: osahi001@odu.edu
+# Project: Hackaton Toll
+# Info: Download real time or historic toll data
+# --------------
 
 function(input, output, session) {
-  
-  colPal <- colorNumeric("RdYlGn", c(1:105))
   
   dat <- reactive({
     dt <- tollParse(origin = input$origin, destination = input$destination)
@@ -24,44 +28,9 @@ function(input, output, session) {
       addProviderTiles("OpenStreetMap.DE", options = providerTileOptions(noWrap = TRUE))  %>% 
       setView(lng =  -77.095936, lat = 38.885211, zoom = 11)
     ramps %>% clearMarkers() %>% clearShapes()
-  #   for(i in 1:nrow(sgmdt)){
-  #     json <- fromJSON(as.character(sgmdt$st_asgeojson[i]),simplifyVector = T)
-  #     ramps <- addPolylines(ramps, lat = json$coordinates[,2], 
-  #                           lng = json$coordinates[,1],
-  #                           stroke = TRUE, color = colPal(i), weight = 5, opacity = 1,
-  #                           popup = paste(sep = "<br/>",
-  #                                         paste("SegmentID:", sgmdt$objectid[i])))
-  #   }
-  # ramps
+
   })
   
-  #Observe changes when selecting the different location
-  observe({
-    rmap <- leafletProxy("rampmap")
-    rmap %>% clearMarkers() %>% clearShapes()
-    # if(input$variable == "All"){
-    #   for(i in 1:nrow(sgmdt)){
-    #     
-    #     json <- fromJSON(as.character(sgmdt$st_asgeojson[i]),simplifyVector = T)
-    #     rmap <- addPolylines(rmap, lat = json$coordinates[,2], 
-    #                           lng = json$coordinates[,1],
-    #                           stroke = TRUE, color = colPal(i), weight = 5, opacity = 1,
-    #                           popup = paste(sep = "<br/>",
-    #                                         paste("SegmentID:", sgmdt$objectid[i])))%>% 
-    #       setView(lng = -76.39, lat = 36.90, zoom = 11)
-    #   }
-    #   rmap
-    # }else{
-    #   json <- fromJSON(as.character(sgmdt$st_asgeojson[sgmdt$objectid == input$variable]),simplifyVector = T)
-    #   rmap <- addPolylines(rmap, lat = json$coordinates[,2], 
-    #                         lng = json$coordinates[,1],
-    #                         stroke = TRUE, color = colPal(1), weight = 5, opacity = 1,
-    #                         popup = paste(sep = "<br/>",
-    #                                       paste("SegmentID:", input$variable))) %>% 
-    #     setView(lng = json$coordinates[,1][1], lat = json$coordinates[,2][1], zoom = 16)
-    #   rmap
-    #}
-    
   })
   
 }
