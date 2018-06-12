@@ -1,0 +1,25 @@
+id,zoneid,name,direction,state,lat,lng,zoneid2
+1,,Washington,W,entry,38.893338,-77.055133,
+2,,Exit 75 Pentagon Alexandria,W,entry,38.895327,-77.067724,
+3,,Lee Hwy - scott st,W,entry,38.897223,-77.081201,
+4,,Lee Hwy - Spout run pkwy,W,entry,38.89363,-77.100714,
+5,,Fairfax drive,W,entry,38.880859,-77.124347,
+6,,Washington blvd,W,entry,38.891945,-77.166237,
+7,,Route 7 - Leesburg Pike,W,entry,38.8987,-77.197605,
+8,3230,I-495 S,E,entry,38.930862,-77.209959,3100
+9,3230,Route 123 - Dolley Madison Blvd,E,entry,38.927584,-77.200992,3100
+10,3230,I-66 West,E,entry,38.878968,-77.253684,3100
+11,3230,I-495 Express Lanes N,E,entry,38.885418,-77.220883,3100
+12,3230,I-495 N,E,entry,38.886814,-77.21767,3100
+13,3220,Route 7 - Leesburg Pike,E,entry,38.900463,-77.188642,3110
+14,3220,Route 267 - Dulles Toll Road,E,entry,38.899845,-77.184155,3110
+15,3210,Sycamore St,E,entry,38.883829,-77.15103,3120
+16,3200,Glebe Rd,E,entry,38.887751,-77.115364,3130
+17,3230,Route 7 - Leesburg Pike,E,exit,38.897386,-77.198883,3100
+18,3220,Westmoreland st,E,exit,38.892193,-77.167438,3110
+19,3220,Washington blvd,E,exit,38.889341,-77.164027,3110
+20,3210,Fairfax drive,E,exit,38.881142,-77.123089,3120
+21,3200,Lee Hwy - Spout run pkwy,E,exit,38.893152,-77.100619,3130
+22,3200,Exit 73 Rossyln,E,exit,38.897168,-77.084717,3130
+23,3200,Exit 75 Pentagon Alexandria,E,exit,38.893924,-77.067768,3130
+24,3200,Washington,E,exit,38.892878,-77.055016,3130
